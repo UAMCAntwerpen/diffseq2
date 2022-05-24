@@ -15,16 +15,16 @@ In the case of lessdif we identify three different secenarios:
         2) the non aligned block has the same length in A and  in B and has some different residue names 
         3) the non aligned block has  not the same length in A and  in B
 
-        We have chosen to implement 'lessdiff' in such a way that only case 1 will not be included in the difference objects. Case 2 and 3 are seen as suffieciently different
+We have chosen to implement 'lessdiff' in such a way that only case 1 will not be included in the difference objects. Case 2 and 3 are seen as suffieciently different
 
 
 ## Usage
 
 Pymol command line:
 
-    diffseq2 protA, protB
-    diffseq2 protA, protB, maxdiff 
-    diffseq2 protA, pritB, lessdiff
+    diffseq2 proteinA, proteinB
+    diffseq2 proteinA, proteinB, maxdiff 
+    diffseq2 proteinA, proteinB, lessdiff
     
 ## Installation
 
