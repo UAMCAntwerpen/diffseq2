@@ -4,11 +4,13 @@
 ## Description
 Highlight sequence differences between two proteins. There can be no missing loops in the proteins, except at the beginning or end of the proteins.
 Makes use of the python 'align' algorithm, this works best if the two proteins are highly similar.
-    
-    maxdiff/lessdiff controls what to do with parts of the sequence that are not considered aligned by the pymol alignment algorithm
-    maxdiff: resiudes that are not considered aligned by pymol, but have the same residue name are considered as different. (default)
-    lessdiff: resiudes that are not considered aligned by pymol, but have the same residue name can be considered as sufficiently different.
-        In the case of lessdif we identify three different secenarios:
+
+
+maxdiff/lessdiff option controls what to do with parts of the sequence that are not considered aligned by the pymol alignment algorithm
+maxdiff: resiudes that are not considered aligned by pymol, but have the same residue name are considered as different. (default)
+lessdiff: resiudes that are not considered aligned by pymol, but have the same residue name can be considered as sufficiently different.
+
+In the case of lessdif we identify three different secenarios:
         1) the non aligned block has the same length in A and  in B and has the exact same residue names
         2) the non aligned block has the same length in A and  in B and has some different residue names 
         3) the non aligned block has  not the same length in A and  in B
@@ -17,6 +19,8 @@ Makes use of the python 'align' algorithm, this works best if the two proteins a
 
 
 ## Usage
+
+Pymol command line:
 
     diffseq2 protA, protB
     diffseq2 protA, protB, maxdiff 
