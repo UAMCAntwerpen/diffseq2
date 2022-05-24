@@ -36,5 +36,5 @@ Installation as plugin: Pymol --> Plugin --> Plugin Manager --> Install New Plug
 
 
 
-diffseq2 is written by Olivier Beyens 
+diffseq2 is written by Olivier Beyens.
 This standalone script builds further on Joao Rodrigues 'diffseq' script.
