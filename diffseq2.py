@@ -1,6 +1,27 @@
 """
-(c) 2016 Joao Rodrigues
-Adapted by Olivier Beyens (diffseq --> diffseq2)
+Diffseq2: a pymol plugin to visualise differences between two proteins.
+
+    Highlight sequence differences between two proteins. 
+    
+    maxdiff/lessdiff controls what to do with parts of the sequence that are not considered aligned by the pymol alignment algorithm
+    maxdiff: resiudes that are not considered aligned by pymol, but have the same residue name are considered as different. (default)
+    lessdiff: resiudes that are not considered aligned by pymol, but have the same residue name can be considered as sufficiently different.
+        In the case of lessdif we identify three different secenarios:
+        1) the non aligned block has the same length in A and  in B and has the exact same residue names
+        2) the non aligned block has the same length in A and  in B and has some different residue names 
+        3) the non aligned block has  not the same length in A and  in B
+
+        We have chosen to implement 'lessdiff' in such a way that only case 1 will not be included in the difference objects. Case 2 and 3 are seen as suffieciently different
+USAGE
+
+    diffseq2 protA, protB
+    diffseq2 protA, protB, maxdiff 
+    diffseq2 protA, pritB, lessdiff
+
+
+
+diffseq2 is written by Olivier Beyens 
+This standalone script builds further on Joao Rodrigues 'diffseq' script.
 """
 
 from __future__ import print_function
