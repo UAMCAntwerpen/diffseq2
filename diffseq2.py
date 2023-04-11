@@ -154,7 +154,7 @@ def couple_to_resid(couple,object1, object2):
     
     def _obj_and_id_to_resid(obj,at_id):
         _s = {'_r': []}
-        cmd.iterate(f'{obj} and id {at_id}',
+        cmd.iterate(f'{obj} and index {at_id}',
                 '_r.append(resi)', space=_s)
         return _s['_r'][0]
     residA = _obj_and_id_to_resid(objA,at_id_A)
@@ -192,7 +192,7 @@ def couple_to_resn(couple, object1,object2):
     
     def _obj_and_id_to_resn(obj,at_id):
         _s = {'_r': []}
-        cmd.iterate(f'{obj} and id {at_id}',
+        cmd.iterate(f'{obj} and index {at_id}',
                 '_r.append(resn)', space=_s)
         return _s['_r'][0]
     resnA = _obj_and_id_to_resn(objA,at_id_A)
